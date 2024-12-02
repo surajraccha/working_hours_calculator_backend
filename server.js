@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 // MongoDB connection
-const uri = process.env.MONGODB_URI;
+const uri = "mongodb+srv://technicalengineer96:N29i52y8ro9jdD4f@cluster0.2uixw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const client = new MongoClient(uri);
 const dbName = 'workHours';
 const db = client.db(dbName);
