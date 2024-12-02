@@ -19,6 +19,10 @@ const userCollection = 'users';
 const settingsCollection = 'settings';
 const entriesCollection = 'entries';
 
+app.get('/api/test', async (req, res) => {
+      res.status(200).json({ response: 'app is running' });
+});
+
 app.post('/api/createNewUser', async (req, res) => {
   try {
     const userId = new ObjectId().toString();
