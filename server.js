@@ -36,7 +36,7 @@ app.post('/api/createNewUser', async (req, res) => {
     res.status(200).json({ userId });
   } catch (error) {
     console.error('Failed to create new user:', error);
-    res.status(500).json({ error: 'Failed to create new user' });
+    res.status(500).json({ error: 'Failed to create new user',url:uri,message:error.message });
   }
 });
 
